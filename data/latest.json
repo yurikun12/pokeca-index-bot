@@ -1,0 +1,41 @@
+{
+  "fetched_at": "2026-08-29T11:59:28.254Z",
+  "source": "pokeca-chart.com",
+  "latest": {
+    "raw": {
+      "date": "2026-08-28",
+      "value": 54319,
+      "volume": 60,
+      "box_num": null,
+      "change_1d_pct": 0.3009823472930054,
+      "change_7d_pct": 1.4322527636689573,
+      "change_30d_pct": -5.9671779247308105,
+      "change_365d_pct": 43.257641691062055
+    },
+    "psa10": {
+      "date": "2026-08-28",
+      "value": 142632,
+      "volume": 422,
+      "box_num": null,
+      "change_1d_pct": -0.3249544015597811,
+      "change_7d_pct": -3.5709939559473747,
+      "change_30d_pct": -2.4525024278816563,
+      "change_365d_pct": 67.39076858078373
+    },
+    "box": {
+      "date": "2026-08-28",
+      "value": 97835.03,
+      "volume": 190,
+      "box_num": 89,
+      "change_1d_pct": 0.06848861801198677,
+      "change_7d_pct": -1.6490009889884367,
+      "change_30d_pct": -4.428056284027991,
+      "change_365d_pct": 68.87293168049013
+    }
+  },
+  "counts": {
+    "raw": 2280,
+    "psa10": 2037,
+    "box": 1818
+  }
+}
