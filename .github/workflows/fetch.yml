@@ -3,7 +3,7 @@ name: Fetch Pokeca Indices
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 21 * * *"
+    - cron: "30 22 * * *"
 
 permissions:
   contents: write
