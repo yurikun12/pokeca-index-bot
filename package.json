@@ -1,0 +1,12 @@
+{
+  "name": "pokeca-index-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node src/fetch-indices.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
