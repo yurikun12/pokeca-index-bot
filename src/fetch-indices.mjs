@@ -37,7 +37,7 @@ function summarize(arr, valueKey) {
     d.setUTCDate(d.getUTCDate() - days);
     return findOnOrBefore(arr, d.toISOString().slice(0,10), valueKey);
   };
-  const p1 = prior(1), p7 = prior(7), p30 = prior(30), p365 = prior(365);
+  const p1 = prior(1), p7 = prior(7), p30 = prior(30), p90 = prior(90), p365 = prior(365);
   return {
     date: end.date,
     value: Number(end[valueKey]),
@@ -46,6 +46,7 @@ function summarize(arr, valueKey) {
     change_1d_pct: pctChange(end[valueKey], p1?.[valueKey]),
     change_7d_pct: pctChange(end[valueKey], p7?.[valueKey]),
     change_30d_pct: pctChange(end[valueKey], p30?.[valueKey]),
+    change_90d_pct: pctChange(end[valueKey], p90?.[valueKey]),
     change_365d_pct: pctChange(end[valueKey], p365?.[valueKey])
   };
 }
