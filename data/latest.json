@@ -1,28 +1,34 @@
 {
-  "fetched_at": "2026-08-29T12:30:34.474Z",
+  "fetched_at": "2026-08-30T03:20:31.503Z",
   "source": "pokeca-chart.com",
+  "status": {
+    "raw": "ok",
+    "psa10": "ok",
+    "box": "previous_data",
+    "box_error": "BOX JSON data was not found in network responses"
+  },
   "latest": {
     "raw": {
-      "date": "2026-08-28",
-      "value": 54319,
-      "volume": 60,
+      "date": "2026-08-29",
+      "value": 54022,
+      "volume": 45,
       "box_num": null,
-      "change_1d_pct": 0.3009823472930054,
-      "change_7d_pct": 1.4322527636689573,
-      "change_30d_pct": -5.9671779247308105,
-      "change_90d_pct": -15.693000155207201,
-      "change_365d_pct": 43.257641691062055
+      "change_1d_pct": -0.5467700068116129,
+      "change_7d_pct": 0.4425107838762457,
+      "change_30d_pct": -5.953831691097107,
+      "change_90d_pct": -15.32601880877743,
+      "change_365d_pct": 42.459323330080956
     },
     "psa10": {
-      "date": "2026-08-28",
-      "value": 142632,
-      "volume": 422,
+      "date": "2026-08-29",
+      "value": 141839,
+      "volume": 536,
       "box_num": null,
-      "change_1d_pct": -0.3249544015597811,
-      "change_7d_pct": -3.5709939559473747,
-      "change_30d_pct": -2.4525024278816563,
-      "change_90d_pct": -5.845386072732314,
-      "change_365d_pct": 67.39076858078373
+      "change_1d_pct": -0.5559762185203881,
+      "change_7d_pct": -3.2904919374083796,
+      "change_30d_pct": -3.4116677675707705,
+      "change_90d_pct": -6.284109679550711,
+      "change_365d_pct": 65.47552382285687
     },
     "box": {
       "date": "2026-08-28",
@@ -37,8 +43,8 @@
     }
   },
   "counts": {
-    "raw": 2280,
-    "psa10": 2037,
+    "raw": 2281,
+    "psa10": 2038,
     "box": 1818
   }
 }
