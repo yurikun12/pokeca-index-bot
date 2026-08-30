@@ -2,40 +2,47 @@ name: Fetch Pokeca Indices
 
 on:
   workflow_dispatch:
+
   schedule:
+    # 毎日 07:30 JST
+    # GitHub Actions の cron は UTC
     - cron: "30 22 * * *"
 
 permissions:
   contents: write
 
+concurrency:
+  group: pokeca-index-fetch
+  cancel-in-progress: false
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "22"
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Fetch indices
+      - name: Fetch Pokeca indices
         run: npm run fetch
 
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add data/
+
           if git diff --cached --quiet; then
-            echo "No changes."
-          else
-            git commit -m "Update Pokeca indices"
-            git push
+            echo "No data changes."
+            exit 0
           fi
+
+          git commit -m "Update Pokeca indices"
+          git push
