@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
 
   schedule:
+    # 毎日 07:00 JST
+    - cron: "0 7 * * *"
+      timezone: "Asia/Tokyo"
+
     # 毎日 07:30 JST
-    # GitHub Actions の cron は UTC
-    - cron: "30 22 * * *"
+    - cron: "30 7 * * *"
+      timezone: "Asia/Tokyo"
 
 permissions:
   contents: write
