@@ -1,0 +1,19 @@
+name: Schedule Test
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show trigger info
+        run: |
+          echo "event=${{ github.event_name }}"
+          echo "UTC time:"
+          date -u
+          echo "JST time:"
+          TZ=Asia/Tokyo date
